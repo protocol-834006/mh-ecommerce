@@ -7,8 +7,10 @@ import React from "react";
 class Header extends React.PureComponent {
   render() {
     return (
-      <div className="mhr-header">
-        <h1>This is a header component</h1>
+      <div className="header section container">
+        <a href="_blank" className="icon">
+          Morning hopper
+        </a>
       </div>
     );
   }

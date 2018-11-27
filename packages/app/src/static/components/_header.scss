@@ -1,0 +1,11 @@
+.header {
+  background-color: $turquoise;
+  padding: 1rem;
+  & > .icon {
+    margin: 0px;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: $white;
+    border: 1px solid $white;
+  }
+}

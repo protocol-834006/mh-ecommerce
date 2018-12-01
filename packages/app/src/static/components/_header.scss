@@ -1,13 +1,8 @@
 .header {
-  background-color: $turquoise;
-  padding: 1rem;
-  & > .icon {
-    margin: 0px;
-    padding: 0.5rem;
-    text-decoration: none;
+  &__cartItems {
+    float: right;
+    padding: 1rem 0.5rem;
+    background-color: $green;
     color: $white;
-    font-family: $family-monospace;
-    font-size: 1rem;
-    border: 1px solid $white;
   }
 }

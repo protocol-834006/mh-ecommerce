@@ -1,6 +1,9 @@
 import React from "react";
 import { Formik, Field } from "formik";
 
+/**
+ * Login screen
+ */
 class LandingPage extends React.Component {
   render() {
     return (

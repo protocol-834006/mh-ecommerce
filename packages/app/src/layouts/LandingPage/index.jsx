@@ -1,54 +1,73 @@
 import React from "react";
-import Header from "../../components/Header";
-import Navigation from "../../components/Navigation";
+import { Formik, Field } from "formik";
 
 class LandingPage extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <section class="hero is-success is-fullheight">
-          <div class="hero-body">
-            <div class="container has-text-centered">
-              <div class="column is-4 is-offset-4">
-                <h3 class="title has-text-grey">Login</h3>
-                <p class="subtitle has-text-grey">Please login to proceed.</p>
-                <div class="box">
-                  <figure class="avatar">
+        <section className="hero is-success is-fullheight">
+          <div className="hero-body">
+            <div className="container has-text-centered">
+              <div className="column is-4 is-offset-4">
+                <h3 className="title has-text-grey">Login</h3>
+                <p className="subtitle has-text-grey">
+                  Please login to proceed.
+                </p>
+                <div className="box">
+                  <figure className="avatar">
                     <img src="https://placehold.it/128x128" alt="" />
                   </figure>
-                  <form>
-                    <div class="field">
-                      <div class="control">
-                        <input
-                          class="input is-large"
-                          type="email"
-                          placeholder="Your Email"
-                          autofocus=""
-                        />
-                      </div>
-                    </div>
-
-                    <div class="field">
-                      <div class="control">
-                        <input
-                          class="input is-large"
-                          type="password"
-                          placeholder="Your Password"
-                        />
-                      </div>
-                    </div>
-                    <div class="field">
-                      <label class="checkbox">
-                        <input type="checkbox" />
-                        Remember me
-                      </label>
-                    </div>
-                    <button class="button is-block is-info is-large is-fullwidth">
-                      Login
-                    </button>
-                  </form>
+                  <Formik
+                    initialValues={{
+                      email: "",
+                      password: ""
+                    }}
+                    onSubmit={(values, actions) => {
+                      setTimeout(() => {
+                        alert(JSON.stringify(values, null, 2));
+                        actions.setSubmitting(false);
+                      });
+                    }}
+                    render={props => (
+                      <form onSubmit={props.handleSubmit}>
+                        <div className="field">
+                          <div className="control">
+                            <Field
+                              name="email"
+                              className="input is-large"
+                              type="text"
+                              placeholder="Your Email"
+                              autofocus=""
+                            />
+                          </div>
+                        </div>
+                        <div className="field">
+                          <div className="control">
+                            <Field
+                              name="password"
+                              className="input is-large"
+                              type="password"
+                              placeholder="Your Password"
+                            />
+                          </div>
+                        </div>
+                        <div className="field">
+                          <label className="checkbox">
+                            <input type="checkbox" />
+                            Remember me
+                          </label>
+                        </div>
+                        <button
+                          type="submit"
+                          className="button is-block is-info is-large is-fullwidth"
+                        >
+                          Login
+                        </button>
+                      </form>
+                    )}
+                  />
                 </div>
-                <p class="has-text-grey">
+                <p className="has-text-grey">
                   <a href="../">Sign Up</a> &nbsp;·&nbsp;
                   <a href="../">Forgot Password</a> &nbsp;·&nbsp;
                   <a href="../">Need Help?</a>

@@ -1,14 +1,12 @@
-import React from "react";
-import { Formik, Field } from "formik";
+import React from 'react';
+import { Formik, Field } from 'formik';
 
 /**
  * Login screen
  */
-class LandingPage extends React.Component {
-  render() {
-    return (
-      <React.Fragment>
-        <section className="hero is-success is-fullheight">
+const LandingPage = (
+  <React.Fragment>
+    <section className="hero is-success is-fullheight">
           <div className="hero-body">
             <div className="container has-text-centered">
               <div className="column is-4 is-offset-4">
@@ -22,8 +20,8 @@ class LandingPage extends React.Component {
                   </figure>
                   <Formik
                     initialValues={{
-                      email: "",
-                      password: ""
+                      email: '',
+                      password: '',
                     }}
                     onSubmit={(values, actions) => {
                       setTimeout(() => {
@@ -79,9 +77,8 @@ class LandingPage extends React.Component {
             </div>
           </div>
         </section>
-      </React.Fragment>
-    );
-  }
-}
+  </React.Fragment>
+);
+
 
 export default LandingPage;

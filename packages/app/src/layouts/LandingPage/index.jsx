@@ -1,10 +1,10 @@
 import React from 'react';
 import { Formik, Field } from 'formik';
-
+import PropTypes from 'prop-types';
 /**
  * Login screen
  */
-const LandingPage = (
+const LandingPage = () => (
   <React.Fragment>
     <section className="hero is-success is-fullheight">
       <div className="hero-body">
@@ -71,5 +71,9 @@ const LandingPage = (
     </section>
   </React.Fragment>
 );
+
+LandingPage.propTypes = {
+  handleSubmit: PropTypes.func.isRequired
+};
 
 export default LandingPage;

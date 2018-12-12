@@ -6,8 +6,5 @@
   },
   "scripts": {
     "run": "cd packages/app && npm run start"
-  },
-  "dependencies": {
-    "redux": "^4.0.1"
   }
 }

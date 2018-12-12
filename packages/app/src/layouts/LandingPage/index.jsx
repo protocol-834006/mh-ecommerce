@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Field } from 'formik';
 import PropTypes from 'prop-types';
+
 /**
  * Login screen
  */
@@ -73,6 +74,7 @@ const LandingPage = () => (
 );
 
 LandingPage.propTypes = {
+  /** @type {Function} */
   handleSubmit: PropTypes.func.isRequired
 };
 

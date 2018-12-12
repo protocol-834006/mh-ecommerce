@@ -1,5 +1,7 @@
+/* eslint-disable */
 import React from 'react';
 import { Formik, Field } from 'formik';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 /**
@@ -28,7 +30,7 @@ const LandingPage = () => (
                     actions.setSubmitting(false);
                   });
                 }}
-                render={props => (
+                render={(props) => (
                   <form onSubmit={props.handleSubmit}>
                     <div className="field">
                       <div className="control">
@@ -60,7 +62,9 @@ const LandingPage = () => (
               />
             </div>
             <p className="has-text-grey">
-              <a href="../">Sign Up</a>
+              <Link href="/signup" to="/signup">
+                Sign Up
+              </Link>
               &nbsp;·&nbsp;
               <a href="../">Forgot Password</a>
               &nbsp;·&nbsp;

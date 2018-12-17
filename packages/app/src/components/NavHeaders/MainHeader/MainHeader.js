@@ -4,19 +4,18 @@ import './MainHeader.css';
 
 class MainHeader extends Component {
   state = {
-    showMeghaMenu: false
+    showMegaMenu: false
   };
 
   // Handle MeghaMenu
 
   handleMeghaMenu = () => {
-    const { showMeghaMenu } = this.state;
-    const show = !showMeghaMenu;
-    this.setState({ showMeghaMenu: show });
+    const { show } = !this.state;
+    this.setState({ showMegaMenu: show });
   };
 
   render() {
-    const { showMeghaMenu } = this.state;
+    const { showMegaMenu } = this.state;
     return (
       <div className="header">
         <div className="header-inner container">
@@ -48,7 +47,6 @@ class MainHeader extends Component {
               data-target=".navbar-main"
               data-settings='{"cloneTarget":true, "targetClassExtras": "navbar-offcanvas"}'
             >
-              {' '}
               <i className="fa fa-bars" />
             </a>
             <a
@@ -59,7 +57,6 @@ class MainHeader extends Component {
               data-target="#offcanvas-sidebar"
               data-settings='{"cloneTarget":false}'
             >
-              {' '}
               <i className="ion-android-more-vertical" />
             </a>
           </div>
@@ -75,7 +72,6 @@ class MainHeader extends Component {
                     data-toggle="dropdown"
                     data-hover="dropdown"
                   >
-                    {' '}
                     <i className="fa fa-home nav-link-icon" />
                     <span className="d-none">Home</span>
                   </a>
@@ -147,7 +143,7 @@ class MainHeader extends Component {
                   >
                     Mega Menu
                   </a>
-                  <MeghaMenu show={showMeghaMenu} />
+                  <MeghaMenu show={showMegaMenu} />
                 </li>
               </ul>
             </div>

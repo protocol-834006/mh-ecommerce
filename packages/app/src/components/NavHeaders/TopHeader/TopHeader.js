@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import SMDropdownMenu from '../../UIComponents/SMDropdownMenu/SM_DropdownMenu';
 
 class TopHeader extends Component {
   state = {
     showDropdownMenu: false
   };
+
+  // Handle DropdownMenu
 
   handleDropDownMenu = () => {
     const { showDropdownMenu } = this.state;
@@ -13,6 +16,7 @@ class TopHeader extends Component {
 
   render() {
     const { openLoginModel, openSignUpModel } = this.props;
+    const { showDropdownMenu } = this.state;
     return (
       <div className="header-upper">
         <div className="header-inner container">
@@ -48,6 +52,7 @@ class TopHeader extends Component {
               >
                 <i className="flag-icon flag-icon-gb" />
               </a>
+              <SMDropdownMenu show={showDropdownMenu} />
             </div>
           </div>
 
@@ -79,4 +84,5 @@ TopHeader.propTypes = {
   openLoginModel: PropTypes.func.isRequired,
   openSignUpModel: PropTypes.func.isRequired
 };
+
 export default TopHeader;

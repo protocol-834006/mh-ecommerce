@@ -1,6 +1,12 @@
 import React from 'react';
-import Headers from '../../components/Header';
+import AppHeader from '../../components/NavHeaders/NavHeader';
+import HeroSlider from '../../components/UIComponents/AntCarousel/AntCarousel';
 
-const HomePage = () => <Headers />;
+const HomePage = () => (
+  <div>
+    <AppHeader />
+    <HeroSlider />
+  </div>
+);
 
 export default HomePage;

@@ -1,2 +1,8 @@
-export LoginForm from './LoginForm';
-export SignForm from './SignUpForm';
+import LoginForm from './LoginForm';
+import SignUpForm from './SignUpForm';
+
+
+export default {
+  LoginForm,
+  SignUpForm
+};

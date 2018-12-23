@@ -1,21 +1,22 @@
 /* eslint-disable */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Form from '../../components/Form';
 
-class LoginForm extends Component {
+const { LoginForm } = Form;
+
+class LoginFormLayout extends Component {
   render() {
     const { modelClose } = this.props;
     return (
-      <form>
-        <h1>Login Form</h1>
-      </form>
+      <LoginForm />
     )
   }
 }
 
-LoginForm.propTypes = {
+LoginFormLayout.propTypes = {
   /** @type {Function} modelClose */
   modelClose: PropTypes.func.isRequired
 };
 
-export default LoginForm;
+export default LoginFormLayout;

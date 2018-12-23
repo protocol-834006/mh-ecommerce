@@ -20,9 +20,11 @@ class SignUpForm extends React.PureComponent {
           {
             ({ isSubmitting }) => (
               <Form>
-                <Field type="email" name="email" />
+                <Field type="email" name="email" placeholder="Type your email" />
                 <ErrorMessage name="email" component="div" />
-                <Field type="password" name="password" />
+                <Field type="password" name="password" placeholder="Type your password" />
+                <ErrorMessage name="password" component="div" />
+                <Field type="text" name="phone" placeholder="Type your phone number" />
                 <ErrorMessage name="password" component="div" />
                 <button type="submit" disabled={isSubmitting}>
                   Submit

@@ -12,7 +12,7 @@ const DashBoard = ({ children }) => (
 );
 
 DashBoard.propTypes = {
-  children: PropTypes.array.isRequired
+  children: PropTypes.object.isRequired
 };
 
 export default DashBoard;

@@ -1,0 +1,15 @@
+.form {
+  margin: 2rem auto;
+  max-width: 500px;
+  background-color: white;
+  padding: 2rem;
+
+  input[type="email"], input[type="password"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  button[type="submit"] {
+    width: 100%;
+  }
+}

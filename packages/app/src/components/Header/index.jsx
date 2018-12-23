@@ -5,7 +5,7 @@ import './style.scss';
 const { Header } = Layout;
 
 /**
- * Header component
+ * All navigation related stuffs should go here
  * @type {React.PureComponent}
  */
 const TopHeader = () => (

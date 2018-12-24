@@ -1,46 +1,112 @@
 import React from 'react';
-import {
-  Formik,
-  Form, Field,
-  ErrorMessage
-} from 'formik';
+import { withFormik } from 'formik';
+import PropTypes from 'prop-types';
+import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
+import TextInput from '../TextInput';
 
-class SignUpForm extends React.PureComponent {
-  handleSubmit(e) {
-    console.log(e);
-    this.setState(e);
-  }
+const SignUpForms = ({
+  values,
+  touched,
+  errors,
+  dirty,
+  handleChange,
+  handleBlur,
+  handleSubmit
+}) => (
+  <div className="form">
+    <h1>Signup with the MorningHoppe</h1>
+    <form onSubmit={handleSubmit}>
+      <TextInput
+        type="email"
+        name="email"
+        placeholder="Email Address*"
+        value={values.email}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        error={dirty && touched.email && errors.email}
+      />
+      <TextInput
+        type="password"
+        name="password"
+        placeholder="Password"
+        value={values.password}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        error={dirty && touched.password && errors.password}
+      />
+      <TextInput
+        type="tel"
+        name="contact"
+        placeholder="Mobile Number"
+        value={values.contact}
+        onChange={handleChange}
+        onBlur={handleBlur}
+        error={dirty && touched.contact && errors.contact}
+      />
+      <div>
+        <label htmlFor="male">
+          <input type="radio" name="gender" id="male" />
+          I am a male
+        </label>
 
-  render() {
-    return (
-      <div className="form">
-        <h1>Sign up with Morning Hopper</h1>
-        <Formik>
-          {
-            ({ isSubmitting }) => (
-              <Form>
-                <Field type="email" name="email" placeholder="Type your email" />
-                <ErrorMessage name="email" component="div" />
-                <Field type="password" name="password" placeholder="Type your password" />
-                <ErrorMessage name="password" component="div" />
-                <Field type="text" name="phone" placeholder="Type your phone number" />
-                <ErrorMessage name="password" component="div" />
-                <button type="submit" disabled={isSubmitting}>
-                  Submit
-                </button>
-                <div style={{ overflow: 'hidden', marginTop: '2rem' }}>
-                  <span className="pull--left"><a href="_">Recover password</a></span>
-                  <span className="pull--right"><Link to="/signup">New to MH? Create Account</Link></span>
-                </div>
-              </Form>
-            )
-          }
-
-        </Formik>
+        <label htmlFor="female">
+          <input type="radio" name="gender" id="male" />
+          I am a female
+        </label>
       </div>
-    );
-  }
-}
 
-export default SignUpForm;
+      <button type="submit">Register</button>
+
+      <div style={{ overflow: 'hidden', marginTop: '2rem' }}>
+        <span className="pull--left">
+          <a href="_">Recover password</a>
+        </span>
+
+        <span className="pull--right">
+          <Link to="/signup">New to MH? Create Account</Link>
+        </span>
+      </div>
+    </form>
+  </div>
+);
+
+const FormikEnhancer = withFormik({
+  validationSchema: Yup.object().shape({
+    email: Yup.string()
+      .email('Email is not valid')
+      .required('Email is required'),
+    password: Yup.string().required('Password is required'),
+    contact: Yup.number()
+      .min(10, 'Contact Number should be of 10 characters')
+      .positive()
+      .required('Contact Number is required')
+  }),
+  handleSubmit(payload, { resetForm, setSubmitting }) {
+    setTimeout(() => {
+      setSubmitting(false);
+      console.log('sign up with', payload);
+    }, 2000);
+    resetForm();
+  }
+});
+
+const FormikEnhancedSignUpFormForm = FormikEnhancer(SignUpForms);
+
+export default FormikEnhancedSignUpFormForm;
+
+SignUpForms.propTypes = {
+  values: PropTypes.object.isRequired,
+  touched: PropTypes.object,
+  errors: PropTypes.object,
+  dirty: PropTypes.bool,
+  handleChange: PropTypes.func.isRequired,
+  handleBlur: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
+};
+
+SignUpForms.defaultProps = {
+  touched: {},
+  errors: {},
+  dirty: false
+};

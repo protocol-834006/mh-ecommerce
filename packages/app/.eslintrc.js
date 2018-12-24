@@ -1,12 +1,6 @@
 module.exports = {
   root: true,
-  extends: [
-    'prettier',
-    'airbnb',
-    'plugin:lodash/recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings'
-  ],
+  extends: ['prettier', 'airbnb', 'plugin:lodash/recommended', 'plugin:import/errors', 'plugin:import/warnings'],
   parser: 'babel-eslint',
   env: {
     browser: true,
@@ -35,10 +29,7 @@ module.exports = {
     'lodash/prefer-includes': 'off',
     'lodash/prefer-lodash-typecheck': 'off',
     'lodash/matches-prop-shorthand': 'off',
-    'no-unused-expressions': [
-      2,
-      { allowShortCircuit: true, allowTernary: true }
-    ],
+    'no-unused-expressions': [2, { allowShortCircuit: true, allowTernary: true }],
     'no-return-assign': [2, 'except-parens'],
     'react/prefer-stateless-function': [1, { ignorePureComponents: true }]
   },

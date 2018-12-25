@@ -12,7 +12,6 @@ const LoginForms = ({
   <div className="login-page">
     <div className="form">
       <form onSubmit={handleSubmit}>
-        <h1 className="heading_text">Login to MorningHoppe</h1>
         <TextInput
           type="email"
           name="email"
@@ -32,10 +31,16 @@ const LoginForms = ({
           error={dirty && touched.password && errors.password}
         />
         <button type="submit">Login</button>
-        <div>
+        {/* <div>
           <span className="pull--left"><a href="_">Recover password</a></span>
           <span className="pull--right"><Link to="/signup">New to MH? Create Account</Link></span>
-        </div>
+        </div> */}
+        <p className="message">
+          Not registered?
+          <Link to="/signup" href="/signup">
+            Create an account
+          </Link>
+        </p>
       </form>
     </div>
   </div>

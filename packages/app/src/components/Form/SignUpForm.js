@@ -14,7 +14,7 @@ const SignUpForms = ({
   handleBlur,
   handleSubmit
 }) => (
-  <div className="form">
+  <div className="signup-form">
     <h1>Signup with the MorningHoppe</h1>
     <form onSubmit={handleSubmit}>
       <TextInput

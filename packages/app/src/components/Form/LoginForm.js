@@ -9,33 +9,35 @@ import TextInput from '../TextInput';
 const LoginForms = ({
   values, touched, errors, dirty, handleChange, handleBlur, handleSubmit
 }) => (
-  <div className="form">
-    <h1>Login to MorningHoppe</h1>
-    <form onSubmit={handleSubmit}>
-      <TextInput
-        type="email"
-        name="email"
-        placeholder="Email Address*"
-        value={values.email}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        error={dirty && touched.email && errors.email}
-      />
-      <TextInput
-        type="password"
-        name="password"
-        placeholder="Password*"
-        value={values.password}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        error={dirty && touched.password && errors.password}
-      />
-      <button type="submit">Login</button>
-      <div style={{ overflow: 'hidden', marginTop: '2rem' }}>
-        <span className="pull--left"><a href="_">Recover password</a></span>
-        <span className="pull--right"><Link to="/signup">New to MH? Create Account</Link></span>
-      </div>
-    </form>
+  <div className="login-page">
+    <div className="form">
+      <form onSubmit={handleSubmit}>
+        <h1 className="heading_text">Login to MorningHoppe</h1>
+        <TextInput
+          type="email"
+          name="email"
+          placeholder="Email Address*"
+          value={values.email}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={dirty && touched.email && errors.email}
+        />
+        <TextInput
+          type="password"
+          name="password"
+          placeholder="Password*"
+          value={values.password}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          error={dirty && touched.password && errors.password}
+        />
+        <button type="submit">Login</button>
+        <div>
+          <span className="pull--left"><a href="_">Recover password</a></span>
+          <span className="pull--right"><Link to="/signup">New to MH? Create Account</Link></span>
+        </div>
+      </form>
+    </div>
   </div>
 );
 

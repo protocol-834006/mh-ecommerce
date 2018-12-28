@@ -56,7 +56,6 @@ const FormikEnhancer = withFormik({
   handleSubmit(payload, { resetForm, setSubmitting }) {
     setTimeout(() => {
       setSubmitting(false);
-      console.log('login up with', payload);
     }, 2000);
     resetForm();
   },

@@ -1,0 +1,8 @@
+{
+  "editor.tabSize": 2,
+  "window.zoomLevel": 0,
+  "editor.formatOnSave": false,
+  "prettier.eslintIntegration": true,
+  "prettier.printWidth": 120,
+  "prettier.singleQuote": true
+}

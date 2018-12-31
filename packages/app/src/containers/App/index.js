@@ -8,9 +8,9 @@ import HomePage from '../../layouts/HomePage';
 const App = () => (
   <DashBoard>
     <Switch>
-      <Route exact path="/" component={Login} />
+      <Route exact path="/" component={HomePage} />
       <Route path="/signup" component={SignUp} />
-      <Route path="/home" component={HomePage} />
+      <Route path="/login" component={Login} />
     </Switch>
   </DashBoard>
 );

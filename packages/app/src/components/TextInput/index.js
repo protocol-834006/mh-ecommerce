@@ -3,13 +3,17 @@ import PropTypes from 'prop-types';
 import InputFeedback from '../InputFeedback';
 
 const TextInput = ({
-  error, name, onChange, type, value, ...props
+  error,
+  name,
+  onChange,
+  type,
+  value,
+  ...props
 }) => (
-  <div>
-    <br />
+  <React.Fragment>
     <input className="input-group" name={name} type={type} value={value} onChange={e => onChange(e)} {...props} />
     <InputFeedback error={error} name={name} />
-  </div>
+  </React.Fragment>
 );
 
 TextInput.propTypes = {
@@ -23,6 +27,5 @@ TextInput.defaultProps = {
   error: null,
   value: ''
 };
-
 
 export default TextInput;

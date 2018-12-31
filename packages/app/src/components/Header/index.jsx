@@ -100,7 +100,7 @@ const TopHeader = () => (
                       About Us
                     </a>
                   </li>
-                  <li className="dropdown open">
+                  <li className="dropdown">
                     <a
                       href="_blank"
                       className="dropdown-toggle nav-stylehead"

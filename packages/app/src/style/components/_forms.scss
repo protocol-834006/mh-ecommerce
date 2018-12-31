@@ -1,8 +1,119 @@
-.form {
-  input [type="text"]{
-
-  }
-  .feedback {
-
+.loggin-wrapper {
+  height: 80vh;
+  background-color: beige;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, rgba($color_3, 0.8), rgba($color_31, 0.8)),
+    url(https://images.unsplash.com/photo-1543555893-57abc37947f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1502&q=80);
+  .user-action-form {
+    position: absolute;
+    top: 50%;
+    padding: 45px 2.5rem;
+    background: #fff;
+    width: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .title {
+      line-height: 2em;
+      text-align: center;
+      color: #000;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      margin-bottom: 25px;
+    }
+    h3 {
+      font-size: 30px;
+      font-weight: 400;
+      text-transform: none;
+      // letter-spacing: 1px;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #1accfd;
+    }
+    .form {
+      width: 100%;
+      position: relative;
+      form {
+        //padding: 10% 2.5em;
+        li {
+          border: 1px solid #b4b2b2;
+          list-style: none;
+          margin-bottom: 25px;
+          width: 100%;
+          background: none;
+          border-radius: 0.3em;
+          -webkit-border-radius: 0.3em;
+          -moz-border-radius: 0.3em;
+        }
+        .icon {
+          // background: url(./images/promo-ads.jpg) no-repeat 0px 0px;
+          height: 30px;
+          width: 30px;
+          display: block;
+          float: left;
+          margin: 7px -11px 0px 0px;
+        }
+        .user {
+          // background: url(./images/promo-ads.jpg) no-repeat 12px 11px;
+        }
+        .lock {
+          // background: url(./images/promo-ads.jpg) no-repeat -17px 11px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+          font-family: "Open Sans", sans-serif;
+          width: 60%;
+          height: 50px;
+          padding: 0.7em em 0.7em 1.7em;
+          color: #858282;
+          font-size: 14px;
+          outline: none;
+          background: none;
+          border: none;
+          font-weight: 600;
+        }
+      }
+      .button2 {
+        display: block;
+        width: 100%;
+        box-shadow: 0 0 1px transparent;
+        background: #1accfd;
+        border-radius: 4px;
+        color: $color_2;
+        letter-spacing: 2px;
+        text-align: center;
+        padding: 12px 27px;
+        margin-top: 10px;
+        &:hover {
+          background: $color_22;
+          color: $color_2;
+        }
+        &:focus {
+          background: $color_22;
+          color: $color_2;
+        }
+      }
+      .form-end {
+        margin-top: 15px;
+        .info_text {
+          font-size: 12px;
+        }
+        .aln-left {
+          text-align: left;
+        }
+        .aln-right {
+          text-align: right;
+        }
+        .aln-center {
+          text-align: center;
+        }
+      }
+    }
   }
 }

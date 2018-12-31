@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import AdsContent from '../../components/AdsContent';
 import {
   doLogin, printMessage, doSignUp, validateOtp
 } from '../../redux/actions/authActions';
@@ -30,7 +31,10 @@ class HomePage extends React.Component {
   }
 
   render() {
-    return (<div>Home Page </div>);
+    return (
+      <div className="content-wrapper">
+        <AdsContent />
+      </div>);
   }
 }
 const signUpRequest = {

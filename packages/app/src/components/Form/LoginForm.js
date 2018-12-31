@@ -2,49 +2,64 @@ import React from 'react';
 import { withFormik } from 'formik';
 import PropTypes from 'prop-types';
 import * as Yup from 'yup';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import TextInput from '../TextInput';
 
 
 const LoginForms = ({
   values, touched, errors, dirty, handleChange, handleBlur, handleSubmit
 }) => (
-  <div className="login-page">
-    <div className="form">
-      <form onSubmit={handleSubmit}>
-        <TextInput
-          type="email"
-          name="email"
-          placeholder="Email Address*"
-          value={values.email}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          error={dirty && touched.email && errors.email}
-        />
-        <TextInput
-          type="password"
-          name="password"
-          placeholder="Password*"
-          value={values.password}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          error={dirty && touched.password && errors.password}
-        />
-        <button type="submit">Login</button>
-        {/* <div>
-          <span className="pull--left"><a href="_">Recover password</a></span>
-          <span className="pull--right"><Link to="/signup">New to MH? Create Account</Link></span>
-        </div> */}
-        <p className="message">
-          Not registered?
-          <Link to="/signup" href="/signup">
-            Create an account
-          </Link>
-        </p>
-      </form>
+  <main className="loggin-wrapper">
+    <div className="user-action-form">
+      <h3>Sign to Morning Hopper</h3>
+      <p className="title">Sign In now, Lets start your Shopping.</p>
+      <div className="form">
+        <form onSubmit={handleSubmit}>
+          <li>
+            <TextInput
+              type="email"
+              name="email"
+              placeholder="Email Address*"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={dirty && touched.email && errors.email}
+            />
+          </li>
+          <li>
+            <TextInput
+              type="password"
+              name="password"
+              placeholder="Password*"
+              value={values.password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={dirty && touched.password && errors.password}
+            />
+          </li>
+          <div>
+            <button type="submit" className="button2">Login</button>
+          </div>
+        </form>
+        <div className="form-end row">
+          <div className="col-md-6">
+            <p className="info_text aln-left">
+              Recover
+              <a href="_blank">Password?</a>
+            </p>
+          </div>
+          <div className="col-md-6">
+            <p className="info_text aln-right">
+              New to MH?
+              <a href="_blank">Create Account</a>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </main>
 );
+
 
 const FormikEnhancer = withFormik({
   validationSchema: Yup.object().shape({

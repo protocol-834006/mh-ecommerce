@@ -32,7 +32,7 @@ module.exports = {
     'no-unused-expressions': [2, { allowShortCircuit: true, allowTernary: true }],
     'no-return-assign': [2, 'except-parens'],
     'react/prefer-stateless-function': [1, { ignorePureComponents: true }],
-    "react/jsx-one-expression-per-line": [true, { "allow": "none"|"literal"|"single-child" }]
+    'react/jsx-one-expression-per-line': [true, { allow: 'none' | 'literal' | 'single-child' }]
   },
   overrides: [
     {

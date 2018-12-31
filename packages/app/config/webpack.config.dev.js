@@ -1,3 +1,4 @@
+/*eslint-disable*/ 
 'use strict';
 
 const fs = require('fs');
@@ -60,8 +61,8 @@ const getStyleLoaders = (cssOptions, preProcessor) => {
           require('postcss-preset-env')({
             autoprefixer: {
               flexbox: 'no-2009',
-            },
-            stage: 3,
+            }, 
+            stage: 3, 
           }),
         ],
       },

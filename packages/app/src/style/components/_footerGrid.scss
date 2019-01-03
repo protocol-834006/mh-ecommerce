@@ -1,0 +1,22 @@
+.footer-grid {
+	border-top: 1px solid rgba(0, 0, 0, 0.16);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+	.grid_item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.icon-fot span {
+			font-size: 33px;
+			line-height: 2.1;
+			color: $color_22;
+			margin-right: 35px;
+		}
+		.text-form-footer h3 {
+			color: #000;
+			font-size: 16px;
+			letter-spacing: 2px;
+			font-weight: 600;
+			line-height: 1.3;
+		}
+	}
+}

@@ -1,0 +1,36 @@
+.future-section {
+	margin-top: 75px;
+	.main_tittle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 35px;
+		h3 {
+			color: #000;
+			font-size: 1.8em;
+			text-align: left;
+		}
+		a {
+			padding: 8px;
+			border: 1px solid gainsboro;
+			font-size: 14px;
+		}
+	}
+	.future_wrapper {
+		display: flex;
+		overflow-x: scroll;
+		flex-wrap: nowrap;
+		min-width: 200px;
+		width: 100%;
+		padding: 0px 15px 40px 15px;
+		> div {
+			width: 375px;
+			height: 200px;
+			background-color: #858282;
+			margin-right: 10px;
+		}
+		> div:last-child {
+			margin-right: 0;
+		}
+	}
+}

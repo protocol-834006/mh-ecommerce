@@ -1,0 +1,52 @@
+.footer-section{
+	.footer-top {
+		background: rgb(28, 34, 36);
+		.subscribe-email {
+			padding: 4em 0 3em 3em;
+			position: relative;
+		}
+		h2 {
+			font-size: 30px;
+			letter-spacing: 1px;
+			color: #fff;
+			font-weight: 600;
+		}
+		p {
+			font-size: 18px;
+			color: #fff;
+			margin: 15px 0 40px;
+		}
+		input[type="email"] {
+			display: inline-block;
+			background: #f5f5f5;
+			border: none;
+			width: 72%;
+			outline: none;
+			padding: 14px;
+			font-size: 17px;
+			color: #fff;
+			letter-spacing: 1px;
+		}
+		input[type="submit"] {
+			outline: none;
+			color: #ffffff;
+			padding: 14px;
+			font-size: 17px;
+			letter-spacing: 1px;
+			width: 18%;
+			background: $color_22;
+			border: none;
+			-webkit-transition: 0.5s all;
+			-moz-transition: 0.5s all;
+			-o-transition: 0.5s all;
+			-ms-transition: 0.5s all;
+			transition: 0.5s all;
+		}
+		.clip_image_section {
+			img {
+				height: 250px;
+			}
+			text-align: center;
+		}
+	}
+}

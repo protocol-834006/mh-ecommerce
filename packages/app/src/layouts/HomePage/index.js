@@ -2,6 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import AdsContent from '../../components/AdsContent';
+import Deals from '../../components/Deals/index';
+import FeaturedItems from '../../components/FeaturedItems';
+import YouMayLike from '../../components/YouMayLike';
+import FooterWrapper from '../../components/FooterWrapper';
 import {
   doLogin, printMessage, doSignUp, validateOtp
 } from '../../redux/actions/authActions';
@@ -34,6 +38,10 @@ class HomePage extends React.Component {
     return (
       <div className="content-wrapper">
         <AdsContent />
+        <Deals />
+        <FeaturedItems />
+        <YouMayLike />
+        <FooterWrapper />
       </div>);
   }
 }

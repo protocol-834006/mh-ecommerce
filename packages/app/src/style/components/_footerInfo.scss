@@ -1,0 +1,18 @@
+.footer-info {
+	padding: 50px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+
+	ul {
+		padding-top: 10px;
+		list-style-type: none;
+		text-decoration: none;
+		li {
+			display: block;
+			padding: 3px 0px;
+			i {
+				width: 25px;
+				color: $color_22;
+			}
+		}
+	}
+}

@@ -1,0 +1,40 @@
+.all_brands_section {
+	margin-top: 75px;
+	.main_tittle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 35px;
+		h3 {
+			color: #000;
+			font-size: 1.8em;
+			text-align: left;
+		}
+		a {
+			padding: 8px;
+			border: 1px solid gainsboro;
+			font-size: 14px;
+		}
+	}
+	.product_wrapper {
+		display: flex;
+		flex-direction: row;
+		overflow-x: scroll;
+		flex-wrap: nowrap;
+		align-items: stretch;
+		min-width: 200px;
+		min-height: 200px;
+		width: 100%;
+		> div {
+			min-width: 200px !important;
+			margin-right: 10px;
+			padding: 10px;
+			border: 1px solid gainsboro;
+			margin-bottom: 10px;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+}

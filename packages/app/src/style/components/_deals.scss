@@ -1,0 +1,39 @@
+.deals-section {
+	padding-top: 50px;
+	.main_tittle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 35px;
+		h3 {
+			color: #000;
+			font-size: 1.8em;
+			text-align: left;
+		}
+		a {
+			margin-right: 15px;
+			padding: 8px;
+			border: 1px solid gainsboro;
+			font-size: 14px;
+		}
+	}
+	.wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: stretch;
+		width: 100%;
+		min-height: 150px;
+		flex-wrap: wrap;
+		> div {
+			width: 200px !important;
+			margin-right: 10px;
+			padding: 10px;
+			border: 1px solid gainsboro;
+			margin-bottom: 10px;
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+	}
+}

@@ -5,7 +5,8 @@ const AdsContent = () => (
     <div className="ads-banner">
       <div className="ad-conent">
         <h1>
-          BIG <span>SALES</span>
+          BIG
+          <span>SALES</span>
         </h1>
         <p>Get Best Offer Upto 20%</p>
         <a className="button2" href="_blank">

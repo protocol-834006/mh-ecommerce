@@ -15,8 +15,10 @@ const TopHeader = () => (
           <div className="brandlogo col-md-4 col-xs-12">
             <h1>
               <a href="index.html">
-                <span>M</span>oning
-                <span>H</span>opper
+                <span>M</span>
+                oning
+                <span>H</span>
+                opper
               </a>
             </h1>
           </div>

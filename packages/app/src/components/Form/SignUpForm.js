@@ -14,61 +14,71 @@ const SignUpForms = ({
   handleBlur,
   handleSubmit
 }) => (
-  <div className="signup-form">
-    <h1>Signup with the MorningHoppe</h1>
-    <form onSubmit={handleSubmit}>
-      <TextInput
-        type="email"
-        name="email"
-        placeholder="Email Address*"
-        value={values.email}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        error={dirty && touched.email && errors.email}
-      />
-      <TextInput
-        type="password"
-        name="password"
-        placeholder="Password"
-        value={values.password}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        error={dirty && touched.password && errors.password}
-      />
-      <TextInput
-        type="tel"
-        name="contact"
-        placeholder="Mobile Number"
-        value={values.contact}
-        onChange={handleChange}
-        onBlur={handleBlur}
-        error={dirty && touched.contact && errors.contact}
-      />
-      <div>
-        <label htmlFor="male">
-          <input type="radio" name="gender" id="male" />
+  <main className="loggin-wrapper">
+    <div className="user-action-form">
+      <h3>Signup with the Morning Hopper</h3>
+      <div className="form">
+        <form onSubmit={handleSubmit}>
+          <li>
+            <TextInput
+              type="email"
+              name="email"
+              placeholder="Email Address*"
+              value={values.email}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={dirty && touched.email && errors.email}
+            />
+          </li>
+          <li>
+            <TextInput
+              type="password"
+              name="password"
+              placeholder="Password"
+              value={values.password}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={dirty && touched.password && errors.password}
+            />
+          </li>
+          <li>
+            <TextInput
+              type="tel"
+              name="contact"
+              placeholder="Mobile Number"
+              value={values.contact}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              error={dirty && touched.contact && errors.contact}
+            />
+          </li>
+          <div>
+            <label htmlFor="male">
+              <input type="radio" name="gender" id="male" />
           I am a male
-        </label>
+            </label>
 
-        <label htmlFor="female">
-          <input type="radio" name="gender" id="male" />
+            <label htmlFor="female">
+              <input type="radio" name="gender" id="male" />
           I am a female
-        </label>
+            </label>
+          </div>
+
+          <button type="submit">Register</button>
+
+          <div style={{ overflow: 'hidden', marginTop: '2rem' }}>
+            <span className="pull--left">
+              <a href="_">Recover password</a>
+            </span>
+
+            <span className="pull--right">
+              <Link to="/signup">New to MH? Create Account</Link>
+            </span>
+          </div>
+        </form>
       </div>
-
-      <button type="submit">Register</button>
-
-      <div style={{ overflow: 'hidden', marginTop: '2rem' }}>
-        <span className="pull--left">
-          <a href="_">Recover password</a>
-        </span>
-
-        <span className="pull--right">
-          <Link to="/signup">New to MH? Create Account</Link>
-        </span>
-      </div>
-    </form>
-  </div>
+    </div>
+  </main>
 );
 
 const FormikEnhancer = withFormik({

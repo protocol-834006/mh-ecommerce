@@ -3,3 +3,7 @@ export const VALIDATE_USER_API_URL = `${apiBaseUrl}ValidateUser`;
 export const SIGNUP_USER_API_URL = `${apiBaseUrl}GetOTPForCustomerBySelfRegistration`;
 export const USER_DASHBOARD_API_URL = `${apiBaseUrl}CustomerDashboardDetails`;
 export const VALIDATE_OTP_API_URL = `${apiBaseUrl}SaveCustomerBySelfRegistration`;
+export const GET_PRODUCTS_BYADDRESS_URL = `${apiBaseUrl}GetProductQuantitiesAndPricesNearBy`;
+export const GET_ORDER_SUMMARY_URL = `${apiBaseUrl}OrderSummaryDetails`;
+export const PLACE_ORDER_URL = `${apiBaseUrl}PlaceOnlineOrderByCustomer`;
+export const GET_USER_ORDERS_URL = `${apiBaseUrl}GetUserOrders`;

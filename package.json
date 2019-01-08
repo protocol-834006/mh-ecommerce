@@ -6,5 +6,8 @@
   },
   "scripts": {
     "start": "cd packages/app && npm run start"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6"
   }
 }

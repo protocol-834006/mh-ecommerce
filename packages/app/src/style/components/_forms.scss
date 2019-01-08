@@ -66,11 +66,13 @@
         }
         input[type="text"],
         input[type="email"],
-        input[type="password"] {
+        input[type="password"],
+        input[type="tel"],
+         {
           font-family: "Open Sans", sans-serif;
           width: 60%;
           height: 50px;
-          padding: 0.7em em 0.7em 1.7em;
+          padding: 1em 1em 1em;
           color: #858282;
           font-size: 14px;
           outline: none;

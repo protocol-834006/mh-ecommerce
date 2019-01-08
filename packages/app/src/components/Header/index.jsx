@@ -1,9 +1,22 @@
 import React from 'react';
-
+import { Menu, Dropdown, Icon } from 'antd';
 /**
  * All navigation related stuffs should go here
  * @type {React.PureComponent}
  */
+const menu = (
+  <Menu>
+    <Menu.Item>
+      <a href="login">Login</a>
+    </Menu.Item>
+    <Menu.Item>
+      <a href="signup">Signup</a>
+    </Menu.Item>
+    <Menu.Item>
+      <a href="http://www.tmall.com/">3rd menu item</a>
+    </Menu.Item>
+  </Menu>
+);
 const TopHeader = () => (
   <header className="header">
     <div className="header-most-top">
@@ -196,26 +209,15 @@ const TopHeader = () => (
                       </li>
                     </ul>
                   </li>
-
                   <li className="dropdown">
-                    <a
-                      className="nav-stylehead dropdown-toggle"
-                      href="_blank"
-                      data-toggle="dropdown"
-                    >
-                      Account
-                      <b className="caret" />
-                    </a>
-                    <ul className="dropdown-menu agile_short_dropdown">
-                      <li>
-                        <a href="icons.html">Login</a>
-                      </li>
-                      <li>
-                        <a href="typography.html">Signup</a>
-                      </li>
-                    </ul>
+                    <Dropdown overlay={menu}>
+                      <a className="ant-dropdown-link" href="_blank">
+                       Account <Icon type="down" />
+                      </a>
+                    </Dropdown>,
                   </li>
                 </ul>
+
               </div>
             </div>
           </nav>

@@ -11,7 +11,14 @@ const TextInput = ({
   ...props
 }) => (
   <React.Fragment>
-    <input className="input-group" name={name} type={type} value={value} onChange={e => onChange(e)} {...props} />
+    <input
+      className="input-group"
+      name={name}
+      type={type}
+      value={value}
+      onChange={e => onChange(e)}
+      {...props}
+    />
     <InputFeedback error={error} name={name} />
   </React.Fragment>
 );

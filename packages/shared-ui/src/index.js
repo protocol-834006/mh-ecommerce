@@ -1,5 +1,5 @@
-function helloWorld () {
-  console.log('Hello World');
-}
+import Button from './Button';
 
-module.exports = helloWorld;
+export {
+  Button
+}

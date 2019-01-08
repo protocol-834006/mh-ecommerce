@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "shared-ui": "1.0.0",
     "@babel/core": "7.1.0",
     "@svgr/webpack": "2.4.1",
     "antd": "^3.11.4",

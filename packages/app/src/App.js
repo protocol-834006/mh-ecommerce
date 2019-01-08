@@ -1,6 +1,7 @@
 import React from 'react';
-import Application from './containers/App';
+import { Button } from 'shared-ui';
+// import Application from './containers/App';
 
-const App = () => <Application />;
+const App = () => <Button />;
 
 export default App;

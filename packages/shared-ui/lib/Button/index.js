@@ -41,7 +41,7 @@ function (_React$Component) {
   _createClass(Button, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("h1", null, "I am button");
+      return _react.default.createElement("button", null, "I am button");
     }
   }]);
 

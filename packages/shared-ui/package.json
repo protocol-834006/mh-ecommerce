@@ -2,11 +2,12 @@
   "name": "shared-ui",
   "version": "1.0.0",
   "description": "",
-  "main": "lib/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/babel src -d lib",
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development"
+    "transpile": "./node_modules/.bin/babel src -d lib --copy-files",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "storybook": "start-storybook -p 9001 -c .storybook"
   },
   "author": "",
   "license": "ISC",
@@ -22,5 +23,8 @@
     "webpack": "^4.28.3",
     "webpack-cli": "^3.2.0",
     "webpack-dev-server": "^3.1.14"
+  },
+  "devDependencies": {
+    "@storybook/react": "^4.1.6"
   }
 }

@@ -5,7 +5,8 @@
     "lerna": "^3.4.3"
   },
   "scripts": {
-    "start": "cd packages/app && npm run start"
+    "start": "cd packages/app && npm run start",
+    "storybook": "cd packages/shared-ui && npm run storybook"
   },
   "dependencies": {
     "classnames": "^2.2.6"

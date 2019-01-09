@@ -1,0 +1,10 @@
+{
+  "name": "mono-service",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "make install && make start"
+  },
+  "author": "",
+  "license": "ISC"
+}
